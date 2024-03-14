@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random-Color</title>
+    
+</head>
+<body>
+    <button onclick=randomColor()>Make Color</button>
+    <h4 id="color">Your color</h4>
+<script>
+    function randomColor(){
+        let red = Math.floor(Math.random() * 255);
+        let green =Math.floor(Math.random() * 255);
+        let blue =Math.floor(Math.random() * 255);
+        let color= `rgb(${red},${green},${blue})`;
+        document.getElementById("color").innerText =color;
+        document.body.style.background=`rgb(${red},${green},${blue})`
+    }
+</script>
+</body>
+</html>
